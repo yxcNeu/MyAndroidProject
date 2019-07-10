@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yangxiaochun.myandroidproject">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -19,6 +20,11 @@
         <activity android:name=".ViewpagerActivity" />
         <activity android:name=".activity.NavigationActivity"/>
         <activity android:name=".activity.FoldToolbarActivity"/>
+        <activity android:name=".activity.OkHttpDemoActivity"/>
+        <activity android:name=".activity.DataBindingDemoActivity"/>
+        <activity android:name=".activity.ShadowActivity"/>
+        <activity android:name=".activity.FlowLayoutActivity"/>
+        <activity android:name=".kotlin.DaggerActivity"/>
     </application>
 
 </manifest>

@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <data>
-        <variable
-            name="user"
-            type="com.example.yangxiaochun.myandroidproject.model.User"></variable>
-    </data>
-    <android.support.constraint.ConstraintLayout
+    <Button
+        android:id="@+id/viewpagerBut"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:text="跳转viewpager—demo" />
 
-        <Button
-            android:id="@+id/viewpagerBut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="跳转viewpager—demo" />
+    <Button
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到导航页面"
+        app:layout_constraintTop_toBottomOf="@id/viewpagerBut" />
 
-        <Button
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="跳转到导航页面"
-            app:layout_constraintTop_toBottomOf="@id/viewpagerBut" />
+    <Button
+        android:id="@+id/foldBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可折叠标题栏"
+        app:layout_constraintTop_toBottomOf="@id/navigation" />
 
-        <Button
-            android:id="@+id/foldBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="可折叠标题栏"
-            app:layout_constraintTop_toBottomOf="@id/navigation" />
 
-        <TextView
-            android:id="@+id/tv_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@{user.firstName}"
-            app:layout_constraintTop_toBottomOf="@id/foldBtn" />
-    </android.support.constraint.ConstraintLayout>
-</layout>
+    <Button
+        android:id="@+id/okHttpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="okHttp demo"
+        app:layout_constraintTop_toBottomOf="@id/foldBtn" />
+
+    <Button
+        android:id="@+id/shadowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="阴影"
+        app:layout_constraintTop_toBottomOf="@id/okHttpBtn" />
+
+    <Button
+        android:id="@+id/flexBoxBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FlexBoxLayout"
+        app:layout_constraintTop_toBottomOf="@id/shadowBtn" />
+
+    <Button
+        android:id="@+id/daggerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dagger"
+        app:layout_constraintTop_toBottomOf="@id/flexBoxBtn" />
+</android.support.constraint.ConstraintLayout>
