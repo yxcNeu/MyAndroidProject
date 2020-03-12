@@ -1,7 +1,7 @@
 package com.example.yangxiaochun.myandroidproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDaggerBtn = findViewById(R.id.daggerBtn);
         mDaggerBtn.setOnClickListener(this);
     }
+
+
 
     @Override
     public void onClick(View view) {
